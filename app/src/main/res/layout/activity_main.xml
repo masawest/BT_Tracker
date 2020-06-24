@@ -7,67 +7,6 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/MainButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:onClick="goToLogActivity"
-        android:text="Log Body Temperature"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
-
-    <TextView
-        android:id="@+id/MainButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:onClick="goToNormalActivity"
-        android:text="Check Normal Range"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
-
-    <TextView
-        android:id="@+id/MainButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:onClick="goToMechanismActivity"
-        android:text="Mechanism of Fever"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.697" />
-
-    <TextView
-        android:id="@+id/MainButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:onClick="goToLink2"
-        android:text="Handling Fever"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
-
     <View
         android:id="@+id/titleBackground"
         android:layout_width="0dp"
@@ -99,5 +38,92 @@
         app:layout_constraintBottom_toBottomOf="@+id/titleBackground"
         app:layout_constraintStart_toStartOf="@+id/titleBackground"
         app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+    <TableLayout
+        android:id="@+id/tableForButtons"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBackground"
+        app:layout_constraintVertical_bias="0.073">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/MainButton1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#FF5722"
+                android:lineSpacingMultiplier="1.1"
+                android:onClick="goToLogActivity"
+                android:gravity="center"
+                android:text=" Log Your \n Body\n Temperature"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                app:layout_constraintVertical_bias="0.655" />
+
+            <TextView
+                android:id="@+id/MainButton2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#FF5722"
+                android:lineSpacingMultiplier="1.1"
+                android:onClick="goToNormalActivity"
+                android:gravity="center"
+                android:text="Check Normal Range"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/MainButton3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#FF5722"
+                android:lineSpacingMultiplier="1.1"
+                android:onClick="goToMechanismActivity"
+                android:gravity="center"
+                android:text=" Mechanism \n of \n Fever"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/MainButton4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="#FF5722"
+                android:lineSpacingMultiplier="1.1"
+                android:onClick="goToLink2"
+                android:gravity="center"
+                android:text=" Handling \n Fever \n"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp" />
+                   <!-- I have two comments about "Handling Fever" TextView:
+                              1. I added \n after "Fever" because the start height/position
+                                 of both "Mechanism of Fever" and "Handling Fever
+                                 must be the same in the TableLayout. So,
+                                 android:gravity="center" makes "Mechanism of Fever" down by 1 line
+                              2. when I input the comment-out command all of the lines after the command
+                                 was commented out. So, I wrote this comment after the lines-->
+        </TableRow>
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
