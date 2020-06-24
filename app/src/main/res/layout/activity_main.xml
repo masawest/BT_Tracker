@@ -11,7 +11,7 @@
         android:id="@+id/titleBackground"
         android:layout_width="0dp"
         android:layout_height="170dp"
-        android:background="#3F41C1"
+        android:background="#316FBA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,10 +45,9 @@
         android:layout_height="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleBackground"
-        app:layout_constraintVertical_bias="0.073">
+        app:layout_constraintVertical_bias="0.01999998">
 
         <TableRow
             android:id="@+id/tableRow1"
@@ -58,13 +57,14 @@
 
             <TextView
                 android:id="@+id/MainButton1"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="197dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="2dp"
                 android:background="#FF5722"
+                android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
                 android:onClick="goToLogActivity"
-                android:gravity="center"
-                android:text=" Log Your \n Body\n Temperature"
+                android:text="Log Your\nBody\nTemperature"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
@@ -72,12 +72,13 @@
 
             <TextView
                 android:id="@+id/MainButton2"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="197dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="2dp"
                 android:background="#FF5722"
+                android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
                 android:onClick="goToNormalActivity"
-                android:gravity="center"
                 android:text="Check Normal Range"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
@@ -88,34 +89,37 @@
             android:id="@+id/tableRow2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/MainButton3"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="197dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="2dp"
                 android:background="#FF5722"
+                android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
                 android:onClick="goToMechanismActivity"
-                android:gravity="center"
-                android:text=" Mechanism \n of \n Fever"
+                android:text="Mechanism\nof\nFever"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp" />
 
             <TextView
                 android:id="@+id/MainButton4"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="197dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="2dp"
                 android:background="#FF5722"
+                android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
                 android:onClick="goToLink2"
-                android:gravity="center"
-                android:text=" Handling \n Fever \n"
+                android:text="Handling\nFever \n"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp" />
-                   <!-- I have two comments about "Handling Fever" TextView:
+            <!-- I have two comments about "Handling Fever" TextView:
                               1. I added \n after "Fever" because the start height/position
                                  of both "Mechanism of Fever" and "Handling Fever
                                  must be the same in the TableLayout. So,
@@ -125,5 +129,16 @@
         </TableRow>
 
     </TableLayout>
+
+    <View
+        android:id="@+id/bottomBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:background="#316FBA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableForButtons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
