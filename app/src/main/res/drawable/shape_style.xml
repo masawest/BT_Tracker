@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+<!-- 背景色  -->
+    <solid android:color="#4155C3" />
+<!-- 角の丸み   -->
+    <corners android:radius="20dp" />
+<!-- 枠線　width:線の幅、 color:線の色   -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" />
+<!-- グラデーション　　-->
+<!-- angle:角度、 type:liner(=線形)   -->
+    <!--   <gradient
+           android:angle="90"
+           android:endColor=""
+           android:startColor=""
+           android:type="linear" /> -->
+<!-- ここではroot elementとしてshapeのres/drawableをつくったが、
+   ボタンを押したときの反転とかにはselectorを使うらしい　　-->
+   </shape>
+<!-- activity_main.xmlに上記のボタンを@drawable/で読み込んだが
+　　　　　レイアウトをみると、なんか四角い影が見える！なんとか消えないか検索したが
+　　　　　見つからず、とりあえずRunした結果、影が消えていた！
+　　　　　したがって、気にしなくてよいみたいだ。
+　　　　　それより気になったのが、Runするとレイアウトの下部の青に設定したViewの高さが
+　　　　　大分減少させられたため、イメージしたレイアウトより窮屈な感じなった。
+　　　　　デバイスにデザインを合わせる難しさを知った。-->
