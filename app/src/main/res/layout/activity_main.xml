@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:text="BT Tracker"
+        android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FFFFFF"
         android:textStyle="italic"
@@ -37,7 +37,10 @@
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/titleBackground"
         app:layout_constraintStart_toStartOf="@+id/titleBackground"
-        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        android:contentDescription="@null" />
+        <!--contentDescriptionは、その要素の意味やアクションを説明するコンテンツラベル。
+        今回の要素は背景の色であって特に意味はないので@nullを入れた。   -->
 
     <TableLayout
         android:id="@+id/tableForButtons"
@@ -63,7 +66,7 @@
                 android:background="#FF5722"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
-                android:text="Log Your\nBody\nTemperature"
+                android:text="@string/log_body_temperature"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
@@ -77,7 +80,7 @@
                 android:background="#FF5722"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
-                android:text="Check Normal Range"
+                android:text="@string/check_normal_range"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp" />
@@ -98,7 +101,7 @@
                 android:background="#FF5722"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
-                android:text="Mechanism\nof\nFever"
+                android:text="@string/mechanism_of_fever"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp" />
@@ -111,12 +114,13 @@
                 android:background="#FF5722"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.1"
-                android:text="Handling\nFever \n"
+                android:text="@string/handling_fever"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp" />
             <!-- I have two comments about "Handling Fever" TextView:
-                              1. I added \n after "Fever" because the start height/position
+                              1. (see res/values/strings.xml 以下のコメントはstringsを設定する前のもの)
+                                 I added \n after "Fever" because the start height/position
                                  of both "Mechanism of Fever" and "Handling Fever
                                  must be the same in the TableLayout. So,
                                  android:gravity="center" makes "Mechanism of Fever" down by 1 line
