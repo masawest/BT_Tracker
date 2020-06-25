@@ -4,9 +4,9 @@
     <string name="check_normal_range">Check Normal Range</string>
     <string name="mechanism_of_fever">Mechanism\nof\nFever</string>
     <string name="handling_fever">Handling\nFever \n</string>
-    <string name="log_your_temp_today">Please log \n your temperature today</string>
+    <string name="log_your_temp_today">Please log \nyour temperature today</string>
     <string name="saveButton">Save</string>
     <string name="useful_links_about_fever">Useful links about fever</string>
     <string name="why_do_we_have_feverButton">Why do we have fever?</string>
-    <string name="normal_human_body_temp_is_btwn">Normal \n human body temperature \n is between 36.0 and 37.5</string>
+    <string name="normal_human_body_temp_is_btwn">Normal \nhuman body temperature \nis between 36.0 and 37.5</string>
 </resources>
