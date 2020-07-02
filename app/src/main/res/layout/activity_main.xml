@@ -148,7 +148,6 @@
         android:background="@drawable/shape_style"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:onClick="setReminder"
         android:text="Set Reminder"
         android:textColor="#FFFFFF"
         android:textSize="24sp"

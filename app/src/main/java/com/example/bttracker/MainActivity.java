@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView mainButton1 = findViewById(R.id.MainButton1);
         mainButton1.setOnClickListener(this);
+        // ↑上記の意味について
+        // まず、2行上のsetContentViewでresourceからactivity_main.xmlを呼び出してlayoutを置いていて、
+        // 次に、そのactivity_main.xmlからidがMainButton1であるTextViewを呼び出し、
+        // TextViewクラス型のインスタンスで定義する"mainButton1"に入力する。
+        // そして、この"mainButton1"にOnClickListenerを設定する。
+        // 引数thisは、今回アクティビティにonClickListenerインターフェースを実装しているので、
+        // "このアクティビティ"という意味だと思われる。
 
         TextView mainButton2 = findViewById(R.id.MainButton2);
         mainButton2.setOnClickListener(this);
@@ -52,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView mainButton4 = findViewById(R.id.MainButton4);
         mainButton4.setOnClickListener(this);
+
+        Button setReminder = findViewById(R.id.setReminderButton);
+        setReminder.setOnClickListener(this);
 
     }
 
@@ -78,9 +89,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent toLink2 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.healthline.com/health/how-to-break-a-fever"));
                 startActivity(toLink2);
                 break;
+            case R.id.setReminderButton:
+                Toast.makeText(this, "Reminder set!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, ReminderBroadcastReceiver.class);
+                PendingIntent pd = PendingIntent.getBroadcast(this, 0, intent, 0);
+                AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+                long interval = 1000*6;
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
+                        System.currentTimeMillis(), interval, pd);
         }
     }
-
+/* ここから50行ほどは、上記のonClickListenメソッドではなく、onClickメソッドをつかってsetReminderを
+　　　作っていたときのjavaコードである。本来は不要なコードは消すべきだと思うが、コードの意味をいろいろ調べて
+　　　自分なりにコメントアウトして説明を加えたので、該当箇所をコードごとコメントアウトして残しておく。
     public void setReminder(View view) {
         // When user clicks "SET REMINDER" button, a toast message will pop up
         // to let user know that a reminder is set
@@ -126,11 +147,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //   引数3: 直前のコードで設定したintervalの値
         //   引数4: 3行前のコードで作成したインスタンス"pd"
         // を入力しRepeatingのフィールド値として設定する、という意味だと思われる。
+        // もっと端的に言うと、"alarmManager"という名前のインスタンスにRepeatingの値を設定する、という意味かな。
         // （ちなみに、フィールドの名前の最初の文字は大文字なのだろうか？
         // 　いや、これは"set"に続いているのでキャメルケースで表記するから最初の文字（RepeatingのR）
         // が大文字だな。きっと。）
         // ちなみに、setRepeatingは難しいところがあるようで、あまりオススメはされていないようだ。
     }
+
+ */
 
     private void createNotificationChannel(){
         // Android 8 以降に導入されたNotification Channelにより、ユーザーはその通知に対して
@@ -160,6 +184,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // ↑上記は、"channel"という名前のインスタンスのDescriptionというフィールド値に
             // 引数として、"channelDescription" (つまり、"Channel for BT Tracker reminder")
             // を設定する、という意味だと思われる。
+            // もっと端的に言うと、"channel"という名前のインスタンスにDescriptionの値を設定する、という意味かな。
             // Create a notification manager
             NotificationManager notificationManager =
                     getSystemService(NotificationManager.class);
