@@ -16,7 +16,10 @@
 
         <activity android:name=".MechanismActivity" />
         <activity android:name=".NormalActivity" />
-        <activity android:name=".LogActivity" />
+        <!-- 下記のparentActivityNameは、
+        　　　　NotificationからLogActivityを開いたときに、バックスタックが作成されるようにする関係で入れた-->
+        <activity android:name=".LogActivity"
+                  android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
