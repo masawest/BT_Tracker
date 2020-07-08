@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!-- EditTextのカーソル色を変える 下記は効かなかったAAPTエラーとかなんとかがでた。
+        EditTextにダイレクトにandroid:textCursorDrawableのコードをいれ、さらに@drawableで
+        呼び出すcursor_styleを作成するとカーソルの色に加えて太さも変更できた-->
+        <!-- <item name="android:textCursorDrawable">"@color/colorOrange"</item> -->
     </style>
 
 </resources>

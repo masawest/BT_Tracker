@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ボタンが押されたときの定義 -->
+    <item android:state_focused="true" >
+        <shape android:shape="rectangle">
+            <solid
+                android:color="#FFFFFF" />
+            <stroke
+                android:width="2dp"
+                android:color="#FF5722" />
+        </shape>
+    </item>
+
+    <!-- ボタンが押されていないときの定義 -->
+    <item android:state_focused="false" >
+        <shape android:shape="rectangle">
+            <solid
+                android:color="#FF5722" />
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFF" />
+        </shape>
+    </item>
+</selector>

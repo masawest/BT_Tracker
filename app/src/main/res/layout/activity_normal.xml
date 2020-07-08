@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#316FBA"
     tools:context=".NormalActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:paddingLeft="15dp"
         android:text="@string/normal_human_body_temp_is_btwn"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
