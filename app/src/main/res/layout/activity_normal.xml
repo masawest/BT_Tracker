@@ -8,19 +8,62 @@
     tools:context=".NormalActivity">
 
     <TextView
-        android:id="@+id/NormalTextView1"
+        android:id="@+id/normalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.1"
-        android:paddingLeft="15dp"
-        android:text="@string/normal_human_body_temp_is_btwn"
+        android:text="@string/normal_human_body_temp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintVertical_bias="0.047" />
+
+    <ScrollView
+        android:id="@+id/normalTextScroll"
+        android:layout_width="0dp"
+        android:layout_height="500sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalTitle"
+        app:layout_constraintVertical_bias="0.112">
+
+        <TextView
+            android:id="@+id/normalLongText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#FFFFFF"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="10dp"
+            android:text="@string/normalRangeText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#020202"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/backHomeButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_style"
+        android:paddingBottom="2dp"
+        android:text="@string/back_to_home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalTextScroll" />
 </androidx.constraintlayout.widget.ConstraintLayout>

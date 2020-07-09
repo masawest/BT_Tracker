@@ -4,15 +4,48 @@
     <string name="check_normal_range">Check Normal Range</string>
     <string name="mechanism_of_fever">Mechanism\nof\nFever</string>
     <string name="handling_fever">Handling\nFever \n</string>
-    <string name="log_your_temp_today">Please log \nyour temperature today</string>
-    <string name="saveButton">Save</string>
+    <string name="set_reminder">SET REMINDER</string>
+    <string name="log_your_temp_today">Please log \nyour body temperature today</string>
+    <string name="saveButton">SAVE</string>
     <string name="useful_links_about_fever">Useful links about fever</string>
     <string name="why_do_we_have_feverButton">Why do we have fever?</string>
-    <string name="normal_human_body_temp_is_btwn">Normal \nhuman body temperature \nis between 36.0 and 37.5</string>
+    <string name="normal_human_body_temp">Normal human body temperature</string>
     <string name="degreeC">&#176;C</string>
     <string name="hint_input"><font size="20">Input here!</font></string>
     <string name="bt_data">Your BT data</string>
-    <string name="back_to_home">Back to home</string>
+    <string name="back_to_home">BACK TO HOME</string>
     <!-- 上記のhint_inputでのfont sizeの箇所はactivity_log.xml上では変化がなかったのでしばらく悩んだが、
      エミュレータ上ではちゃんと効いていた。。。-->
+    <string name="normalRangeText">
+        "    Temperature" control (thermoregulation) is part of a homeostatic mechanism that
+        keeps the organism at optimum operating temperature, as the temperature affects
+        the rate of chemical reactions. In humans, the average internal temperature is 37.0 °C,
+        though it varies around this point by 0.5 to 1 °C. However, no person always has exactly
+        the same temperature at every moment of the day. Temperatures cycle regularly up and down
+        through the day, as controlled by the circadian rhythm. The lowest temperature occurs
+        about two hours before the person normally wakes up. Additionally, temperatures change
+        according to activities and external factors.
+        \n \n
+        "    Normal" human body temperature varies slightly from person to person and by the time of day.
+        Consequently, each type of measurement has a range of normal temperatures. The range for
+        normal human body temperatures, taken orally, is 36.3–37.3 °C. This means that any oral
+        temperature between 36.3 and 37.3 °C is likely to be normal. The normal human body
+        temperature is often stated as 36.5–37.5 °C. In adults a review of the literature has
+        found a wider range of 33.2–38.2 °C for normal temperatures, depending on the gender
+        and location measured.
+        \n \n
+        "    Reported" values vary depending on how it is measured: oral (under the tongue):
+        36.4-37.2 °C, internal (rectal, vaginal): 37.0 °C. A rectal or vaginal measurement taken
+        directly inside the body cavity is typically slightly higher than oral measurement, and
+        oral measurement is somewhat higher than skin measurement. Other places, such as under
+        the arm or in the ear, produce different typical temperatures. While some people think
+        of these averages as representing normal or ideal measurements, a wide range of
+        temperatures has been found in healthy people. The body temperature of a healthy person
+        varies during the day by about 0.5 °C with lower temperatures in the morning and higher
+        temperatures in the late afternoon and evening, as the body needs and activities change.
+        Other circumstances also affect the body temperature. The core body temperature of an
+        individual tends to have the lowest value in the second half of the sleep cycle; the
+        lowest point, called the nadir, is one of the primary markers for circadian rhythms.
+        The body temperature also changes when a person is hungry, sleepy, sick, or cold.
+    </string>
 </resources>
