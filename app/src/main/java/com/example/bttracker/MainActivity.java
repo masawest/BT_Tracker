@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button setReminder = findViewById(R.id.setReminderButton);
         setReminder.setOnClickListener(this);
-
     }
 
     @Override

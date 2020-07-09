@@ -11,6 +11,8 @@
     <string name="normal_human_body_temp_is_btwn">Normal \nhuman body temperature \nis between 36.0 and 37.5</string>
     <string name="degreeC">&#176;C</string>
     <string name="hint_input"><font size="20">Input here!</font></string>
+    <string name="bt_data">Your BT data</string>
+    <string name="back_to_home">Back to home</string>
     <!-- 上記のhint_inputでのfont sizeの箇所はactivity_log.xml上では変化がなかったのでしばらく悩んだが、
      エミュレータ上ではちゃんと効いていた。。。-->
 </resources>
