@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Create notification channel only if SDK version > Android 8 Oreo
         // CAUTION: It's Oreo's O, not number 0!!!
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            String channelID = "BT Tracker Channel";
+            String channelID = "BT_Tracker_Channel";
             // ↑上記は、String型（文字列型）で定義する"channelID"という名前の変数を作成し、
             // そこに"BT Tracker Channel"という文字列を入力する、という意味。
             String channelName = "BTTrackerReminderChannel";
